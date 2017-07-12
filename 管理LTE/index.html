@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>后台管理</title>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/amazeui.css" />
+  <link href="css/ionicons.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./css1/index.css">
+  <style type="text/css">
+  @media (max-width:767px){
+    .content-wrapper,.right-side,.main-footer{
+      margin-left:0;
+    }
+    .main-header .logo,.main-header .navbar{
+      margin:0;
+      width:100%;
+      float:none;
+    }
+    .main-header .navbar-custom-menu{
+      float:right;
+    }
+    .main-sidebar{
+      transform:translate(-230px,0);
+      padding-top:100px;
+    }
+  }
+
+  @media (max-width:991px){
+    .navbar-custom-menu .navbar-nav li a{
+      padding-top:15px;
+      padding-bottom:15px;
+      line-height: 20px;
+    }
+    .navbar-custom-menu .navbar-nav{
+      margin:0;
+      float:right;
+    }
+    .navbar-custom-menu .navbar-nav li{
+      position:static;
+      float:left;
+    }
+    .content-header .breadcrumb{
+      position:relative;
+      margin-top:5px;
+      top:0;
+      right:0;
+      float:none;
+      background: #d2d6de;
+      padding-left:10px;
+    }
+  }
+  </style>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body class="skin-blue sidebar-mini">
+  <div class="wrapper">
+    <header class="main-header">
+      <a href="javascript:;" class="logo">
+        <!-- <span class="logo-mini"><b>A</b>LT</span> -->
+        <span class="logo-lg"><b>Admin</b>LTE</span>
+      </a>
+      <nav class="navbar navbar-static-top">
+        <a  href="#" class="fa fa-bars sidebar-toggle" data-toggle="push-menu" role="button">
+          <span class="sr-only">Toggle navigation</span>
+        </a>
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+            <li class="dropdown messages-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                <span class="label label-success">4</span>
+              </a>
+            </li>
+            <li class="dropdown notifications-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-bell-o" aria-hidden="true"></i>
+                <span class="label label-warning">10</span>
+              </a>
+            </li>
+            <li class="dropdown tasks-menu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                <i class="fa fa-flag-o" aria-hidden="true"></i>
+                <span class="label label-danger">9</span>
+              </a>
+            </li>
+            <li class="dropdown user user-menu">
+              <a class="dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
+                <img class="user-image" src="./images/user.jpg" alt="" />
+                <span class="hidden-xs">Alexander Pierce</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" data-toggle="control-sidebar">
+                <i class="fa fa-gears" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>  
+      </nav>
+    </header>
+    <aside class="main-sidebar">
+      <section class="sidebar">
+        <div class="user-panel">
+          <div class="pull-left image">
+            <img src="./images/user.jpg" width="45" height="45" class="img-circle" alt="" />
+          </div>
+          <div class="pull-left info">
+            <p>管理员</p>
+            <a href="#">
+              <i class="fa fa-circle text-success"></i>
+              在线
+            </a>
+          </div>
+        </div>
+        <form action="#" method="get" class="sidebar-form">
+          <div class="input-group">
+            <input type="text" name="q" class="form-control" placeholder="搜索" />
+            <span class="input-group-btn">
+              <button type="submit" name="search" class="btn btn-flat">
+                <i class="fa fa-search"></i>
+              </button>
+            </span> 
+          </div>    
+        </form> 
+        <ul class="sidebar-menu tree">
+          <li class="header">MAIN NAVIGATION</li>
+          <li class="active treeview">
+            <a href="javascript:;">
+              <i class="fa fa-dashboard"></i>
+              <span>Dashboard</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>     
+            </a>
+            <ul class="treeview-menu">
+              <li>
+                <a href="javascript:;">
+                  <i class="fa fa-circle-o"></i>
+                   Dashboard v1
+                </a>
+              </li>
+              <li class="active">
+                <a href="javascript:;">
+                  <i class="fa fa-circle-o"></i>
+                   Dashboard v2
+                </a>
+              </li>
+            </ul> 
+          </li>
+          <li class="treeview">
+            <a href="javascript:;">
+              <i class="fa fa-files-o"></i>
+              <span>Layout Options</span>
+              <span class="pull-right-container">
+                <span class="label label-primary pull-right">4</span>
+              </span>     
+            </a>
+            <ul class="treeview-menu">
+              <li>
+                <a href="javascript:;">
+                  <i class="fa fa-circle-o"></i>
+                   Dashboard v1
+                </a>
+              </li>
+              <li class="active">
+                <a href="javascript:;">
+                  <i class="fa fa-circle-o"></i>
+                   Dashboard v2
+                </a>
+              </li>
+            </ul> 
+          </li>
+          <li>
+            <a href="javascript:;">
+              <i class="fa fa-th"></i>
+              <span>Widgets</span>
+              <span class="pull-right-container">
+                <small class="label pull-right bg-green">new</small>
+              </span>
+            </a>
+          </li>
+          <li class="treeview">
+            <a href="javascript:;">
+              <i class="fa fa-files-o"></i>
+              <span>Charts</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>     
+            </a>
+            <ul class="treeview-menu">
+              <li>
+                <a href="javascript:;">
+                  <i class="fa fa-circle-o"></i>
+                   Dashboard v1
+                </a>
+              </li>
+              <li class="active">
+                <a href="javascript:;">
+                  <i class="fa fa-circle-o"></i>
+                   Dashboard v2
+                </a>
+              </li>
+            </ul> 
+          </li>
+          <li class="treeview">
+            <a href="javascript:;">
+              <i class="fa fa-files-o"></i>
+              <span>UI Elements</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>     
+            </a>
+            <ul class="treeview-menu">
+              <li>
+                <a href="javascript:;">
+                  <i class="fa fa-circle-o"></i>
+                   Dashboard v1
+                </a>
+              </li>
+              <li class="active">
+                <a href="javascript:;">
+                  <i class="fa fa-circle-o"></i>
+                   Dashboard v2
+                </a>
+              </li>
+            </ul> 
+          </li>
+          <li class="treeview">
+            <a href="javascript:;">
+              <i class="fa fa-files-o"></i>
+              <span>Forms</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>     
+            </a>
+            <ul class="treeview-menu">
+              <li>
+                <a href="javascript:;">
+                  <i class="fa fa-circle-o"></i>
+                   Dashboard v1
+                </a>
+              </li>
+              <li class="active">
+                <a href="javascript:;">
+                  <i class="fa fa-circle-o"></i>
+                   Dashboard v2
+                </a>
+              </li>
+            </ul> 
+          </li>
+          <li class="treeview">
+            <a href="javascript:;">
+              <i class="fa fa-files-o"></i>
+              <span>Tables</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>     
+            </a>
+            <ul class="treeview-menu">
+              <li>
+                <a href="javascript:;">
+                  <i class="fa fa-circle-o"></i>
+                   Dashboard v1
+                </a>
+              </li>
+              <li class="active">
+                <a href="javascript:;">
+                  <i class="fa fa-circle-o"></i>
+                   Dashboard v2
+                </a>
+              </li>
+            </ul> 
+          </li>
+          <li>
+            <a href="javascript:;">
+              <i class="fa fa-calendar"></i>
+              <span>Calendar</span>
+              <span class="pull-right-container">
+                <small class="label pull-right bg-red">3</small>
+                <small class="label pull-right bg-blue">17</small>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;">
+              <i class="fa fa-th"></i>
+              <span>Widgets</span>
+              <span class="pull-right-container">
+                <small class="label pull-right bg-green">new</small>
+                <small class="label pull-right bg-red">3</small>
+                <small class="label pull-right bg-blue">17</small>
+              </span>
+            </a>
+          </li>
+        </ul> 
+      </section>
+    </aside> 
+    <div class="content-wrapper">
+      <section class="content-header">
+        <h1>Dashboard <small>Version 2.0</small></h1>
+        <ol class="breadcrumb">
+          <li>
+            <a href="javascript:;">
+              <i class="fa fa-dashboard"></i>
+              Home
+            </a>
+          </li>
+          <li class="active">Dashboard</li> 
+        </ol> 
+      </section>
+      <section class="content">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="info-box">
+              <span class="info-box-icon bg-aqua">
+                <i class="ion ion-ios-gear-outline"></i>
+              </span>
+              <div class="info-box-content">
+                <span class="info-box-text">CPU Traffic</span>
+                <span class="info-box-number">90<small>%</small></span>
+              </div>
+            </div>  
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="info-box">
+              <span class="info-box-icon bg-red">
+                <i class="fa fa-google-plus"></i>
+              </span>
+              <div class="info-box-content">
+                <span class="info-box-text">Likes</span>
+                <span class="info-box-number">41,410</span>
+              </div>
+            </div>  
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="info-box">
+              <span class="info-box-icon bg-green">
+                <i class="ion ion-ios-cart-outline"></i>
+              </span>
+              <div class="info-box-content">
+                <span class="info-box-text">Sales</span>
+                <span class="info-box-number">760</span>
+              </div>
+            </div>  
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="info-box">
+              <span class="info-box-icon bg-yellow">
+                <i class="ion ion-ios-people-outline"></i>
+              </span>
+              <div class="info-box-content">
+                <span class="info-box-text">New Members</span>
+                <span class="info-box-number">2,000</span>
+              </div>
+            </div>  
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="box">
+              <div class="box-header with-border">
+                <h3 class="box-title">Monthly</h3>
+                <div class="box-tools pull-right">
+                  <button class="btn btn-box-tool">
+                    <i class="fa fa-minus"></i>
+                  </button>
+                  <dvi class="btn-group">
+                    <button class="btn btn-box-tool">
+                      <i class="fa fa-wrench"></i>
+                    </button>
+                  </dvi>
+                  <button class="btn btn-box-tool">
+                    <i class="fa fa-times"></i>
+                  </button>  
+                </div>
+              </div>
+              <div class="box-body">
+                <div class="row">
+                  <div class="col-md-8">
+                    <p class="text-center">
+                      <strong>Sales: 1 Jan, 2014 - 30 Jul, 2014</strong>
+                    </p>
+                    <div class="chart">
+                      <canvas id="canvas" width="703" height="180"></canvas>
+                    </div>
+                    <script src='js/Chart.min.js'></script>
+                    <script src="js/index.js"></script>        
+                  </div>
+                  <div class="col-md-4">
+                    <p class="text-center">
+                      <strong>Goal Completion</strong>
+                    </p>
+                    <div class="progress-group">
+                      <span class="progress-text">Add Products to Cart</span>
+                      <span class="progress-number"><b>160</b>/200</span>
+                      <div class="progress sm">
+                        <div class="progress-bar progress-bar-aqua"></div>
+                      </div> 
+                    </div>
+                    <div class="progress-group">
+                      <span class="progress-text">Complete Purchase</span>
+                      <span class="progress-number"><b>310</b>/400</span>
+                      <div class="progress sm">
+                        <div class="progress-bar progress-bar-red"></div>
+                      </div> 
+                    </div>
+                    <div class="progress-group">
+                      <span class="progress-text">Visit Premium Page</span>
+                      <span class="progress-number"><b>480</b>/800</span>
+                      <div class="progress sm">
+                        <div class="progress-bar progress-bar-green"></div>
+                      </div> 
+                    </div>
+                    <div class="progress-group">
+                      <span class="progress-text">Send Inquiries</span>
+                      <span class="progress-number"><b>250</b>/500</span>
+                      <div class="progress sm">
+                        <div class="progress-bar progress-bar-yellow"></div>
+                      </div> 
+                    </div>    
+                  </div>
+                </div>  
+              </div>
+              <div class="box-footer">
+                <div class="row">
+                  <div class="col-sm-3 col-xs-6">
+                    <div class="description-block border-right">
+                      <span class="text-green"><i class="fa fa-caret-up"></i>17%</span>
+                      <h5 class="description-header">$35,210.43</h5>
+                      <span class="description-text">TOTAL revenue</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-3 col-xs-6">
+                    <div class="description-block border-right">
+                      <span class="text-green"><i class="fa fa-caret-up"></i>17%</span>
+                      <h5 class="description-header">$35,210.43</h5>
+                      <span class="description-text">TOTAL revenue</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-3 col-xs-6">
+                    <div class="description-block border-right">
+                      <span class="text-green"><i class="fa fa-caret-up"></i>17%</span>
+                      <h5 class="description-header">$35,210.43</h5>
+                      <span class="description-text">TOTAL revenue</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-3 col-xs-6">
+                    <div class="description-block">
+                      <span class="text-green"><i class="fa fa-caret-up"></i>17%</span>
+                      <h5 class="description-header">$35,210.43</h5>
+                      <span class="description-text">TOTAL revenue</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>  
+          </div>  
+        </div>
+        <div class="row">
+          <div class="col-md-8">
+            <div class="box box-success">
+              <div class="box-header with-border">
+                <h3 class="box-title">Visitors Report</h3>
+                <div class="box-tools pull-right">
+                  <button class="btn btn-box-tool">
+                    <i class="fa fa-minus"></i>
+                  </button>
+                  <button class="btn btn-box-tool">
+                    <i class="fa fa-times"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="box-body no-padding">
+                <div class="row">
+                  <div class="col-md-9 col-sm-8">
+                    <div class="pad"></div>
+                  </div>
+                  <div class="col-md-3 col-sm-4">
+                    <div class="pdd box-pane-right bg-green">
+                      <div class="description-block margin-bottom">
+                        <div class="sparkbar pdd">
+                          <img src="./images/zhutu.png" class="cvs" alt="" />
+                        </div>
+                        <h5 class="description-header">8390</h5>
+                        <span class="description-text">Visits</span>
+                      </div>
+                      <div class="description-block margin-bottom">
+                        <div class="sparkbar pdd">
+                          <img src="./images/zhutu.png" class="cvs" alt="" />
+                        </div>
+                        <h5 class="description-header">8390</h5>
+                        <span class="description-text">Visits</span>
+                      </div>
+                      <div class="description-block margin-bottom">
+                        <div class="sparkbar pdd">
+                          <img src="./images/zhutu.png" class="cvs" alt="" />
+                        </div>
+                        <h5 class="description-header">8390</h5>
+                        <span class="description-text">Visits</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="box box-warning direct-chat direct-chat-warning">
+                  <div class="box-header with-border">
+                    <h3 class="box-title">Direct Chat</h3>
+                    <div class="box-tools pull-right">
+                      <span class="badge bg-yellow">3</span>
+                      <button class="btn btn-box-tool">
+                        <i class="fa fa-minus"></i>
+                      </button>
+                      <button class="btn btn-box-tool">
+                        <i class="fa fa-comments"></i>
+                      </button>
+                      <button class="btn btn-box-tool">
+                        <i class="fa fa-times"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="box-body">
+                    <div class="direct-chat-messages">
+                      <div class="direct-chat-msg">
+                        <div class="direct-chat-info clearfix">
+                          <span class="direct-chat-name pull-left">Alexander Pierce</span>
+                          <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span>
+                        </div>
+                        <img src="./images/user2.jpg" alt="" class="direct-chat-img" />
+                        <div class="direct-chat-text">
+                          Is this template really for free? That's unbelievable!
+                        </div>
+                      </div>
+                      <div class="direct-chat-msg right">
+                        <div class="direct-chat-info clearfix">
+                          <span class="direct-chat-name pull-right">Alexander Pierce</span>
+                          <span class="direct-chat-timestamp pull-left">23 Jan 2:00 pm</span>
+                        </div>
+                        <img src="./images/user2.jpg" alt="" class="direct-chat-img" />
+                        <div class="direct-chat-text">
+                          Is this template really for free? That's unbelievable!
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="box box-warning direct-chat direct-chat-warning">
+                  <div class="box-header with-border">
+                    <h3 class="box-title">Direct Chat</h3>
+                    <div class="box-tools pull-right">
+                      <span class="badge bg-yellow">3</span>
+                      <button class="btn btn-box-tool">
+                        <i class="fa fa-minus"></i>
+                      </button>
+                      <button class="btn btn-box-tool">
+                        <i class="fa fa-comments"></i>
+                      </button>
+                      <button class="btn btn-box-tool">
+                        <i class="fa fa-times"></i>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="box-body">
+                    <div class="direct-chat-messages">
+                      <div class="direct-chat-msg">
+                        <div class="direct-chat-info clearfix">
+                          <span class="direct-chat-name pull-left">Alexander Pierce</span>
+                          <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span>
+                        </div>
+                        <img src="./images/user2.jpg" alt="" class="direct-chat-img" />
+                        <div class="direct-chat-text">
+                          Is this template really for free? That's unbelievable!
+                        </div>
+                      </div>
+                      <div class="direct-chat-msg right">
+                        <div class="direct-chat-info clearfix">
+                          <span class="direct-chat-name pull-right">Alexander Pierce</span>
+                          <span class="direct-chat-timestamp pull-left">23 Jan 2:00 pm</span>
+                        </div>
+                        <img src="./images/user2.jpg" alt="" class="direct-chat-img" />
+                        <div class="direct-chat-text">
+                          Is this template really for free? That's unbelievable!
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="box box-info latest"></div>
+          </div>
+          <div class="col-md-4">
+            <div class="info-box bg-yellow">
+              <span class="info-box-icon">
+                <i class="ion ion-ios-pricetag-outline"></i>
+              </span>
+              <div class="info-box-content">
+                <span class="info-box-text">Inventory</span>
+                <span class="info-box-number">5,200</span>
+                <div class="progress">
+                  <div class="progress-bar" style="width:50%"></div>
+                </div>
+                <span class="progress-description">
+                    50% Increase in 30 Days
+                  </span>
+              </div>
+            </div>
+            <div class="info-box bg-green">
+              <span class="info-box-icon">
+                <i class="ion ion-ios-heart-outline"></i>
+              </span>
+              <div class="info-box-content">
+                <span class="info-box-text">Inventory</span>
+                <span class="info-box-number">5,200</span>
+                <div class="progress">
+                  <div class="progress-bar" style="width:50%"></div>
+                </div>
+                <span class="progress-description">
+                    50% Increase in 30 Days
+                  </span>
+              </div>
+            </div>
+            <div class="info-box bg-red">
+              <span class="info-box-icon">
+                <i class="ion ion-ios-cloud-download-outline"></i>
+              </span>
+              <div class="info-box-content">
+                <span class="info-box-text">Inventory</span>
+                <span class="info-box-number">5,200</span>
+                <div class="progress">
+                  <div class="progress-bar" style="width:50%"></div>
+                </div>
+                <span class="progress-description">
+                    50% Increase in 30 Days
+                  </span>
+              </div>
+            </div>
+            <div class="info-box bg-aqua">
+              <span class="info-box-icon">
+                <i class="ion-ios-chatbubble-outline"></i>
+              </span>
+              <div class="info-box-content">
+                <span class="info-box-text">Inventory</span>
+                <span class="info-box-number">5,200</span>
+                <div class="progress">
+                  <div class="progress-bar" style="width:50%"></div>
+                </div>
+                <span class="progress-description">
+                    50% Increase in 30 Days
+                  </span>
+              </div>
+            </div>
+            <div class="box box-default"></div>
+            <div class="box box-primary"></div>
+          </div>
+        </div>
+      </section>  
+    </div>
+    <div class="main-footer">
+      <div class="pull-right hidden-xs">
+        <b>Version</b>
+        2.4.0
+      </div>
+      <strong>
+        Copyright © 2014-2016
+        <a href="javascript:;">Almsaeed Studio</a>
+      </strong>
+      All rights
+      reserved.
+    </div>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
